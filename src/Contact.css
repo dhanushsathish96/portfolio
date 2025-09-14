@@ -80,7 +80,7 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .contactcontainer {
     flex-direction: column; 
     align-items: center;

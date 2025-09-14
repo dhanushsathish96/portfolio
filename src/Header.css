@@ -51,7 +51,7 @@ a{
 
 }
 
-@media(max-width:768px){
+@media(max-width:480px){
     .lists{
         display:none; /*wheen screen is small it hides thee lists*/
         

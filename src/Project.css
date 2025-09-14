@@ -44,7 +44,7 @@ h1{
     width: 10px;;
 }
 
-@media(max-width:768px){
+@media(max-width:480px){
     .ParentFlex{
        flex-direction: column;
        align-items: center;
