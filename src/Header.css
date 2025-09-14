@@ -1,0 +1,86 @@
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+    gap:20px
+}
+
+.lists{
+    display:flex;
+    padding-bottom: 18px;
+    margin: 2px;
+    gap:20px;
+    list-style: none;
+    position: relative;
+    top:-1px;
+
+}
+
+.hamburger {
+  display: none;      /* due tpo larger screen it hides the button*/
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  position: relative;
+  top:-10px;
+}
+
+.port{
+    display:flex;
+    justify-content: space-between;
+    font-weight: bolder;
+    padding-top:15px;
+    font-weight: bolder;
+    
+}
+
+a{
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100px;
+    font-size:20px
+}
+
+.Parent{
+    background-color: rgb(7,7,85);
+    padding:5px;
+
+}
+
+@media(max-width:768px){
+    .lists{
+        display:none; /*wheen screen is small it hides thee lists*/
+        
+    }
+
+    .lists.show {
+    display: flex; /* show lists when button clicked */
+    flex-direction: column;
+    gap: 10px;
+    right:40px;
+  }
+
+    .hamburger{
+    display: block;
+    position : absolute;
+    top : 16px;
+    right: 10px;
+    
+ }
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.Parent {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}

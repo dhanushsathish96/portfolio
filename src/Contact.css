@@ -1,0 +1,119 @@
+.contact {
+  background-color: #d7dfe9;
+  padding: 60px 20px;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+}
+
+.contact h1 {
+  font-size: 40px;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+.contactcontainer {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.contactform {
+  max-width: 400px;
+  width: 100%;
+  text-align: left;
+}
+
+.contactform input,
+.contactform textarea {
+  width: 100%;            
+  padding: 12px;
+  margin-bottom: 15px;     
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  resize: none;
+}
+
+.contactform button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: rgb(7,7,85);
+  color: white;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contactform button:active {
+  background-color: #6c7bd0;
+  transform: scale(1.02);
+}
+
+.contactinfo {
+  max-width: 300px;
+  text-align: left;
+}
+
+.contactinfo h2 {
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.contactinfo p {
+  margin-bottom: 10px;
+  color: black;
+}
+
+.socialicons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: flex-start;
+}
+
+.socialicons a {
+  font-size: 24px;
+  color: #222;
+  transition: all 0.3s ease;
+}
+
+
+@media (max-width: 768px) {
+  .contactcontainer {
+    flex-direction: column; 
+    align-items: center;
+    gap: 30px;
+  }
+
+  .contactinfo {
+    text-align: center; 
+    max-width: 100%;
+  }
+
+  .socialicons {
+    justify-content: center; 
+  }
+}
+
+
+.what:hover{
+  color: #22e359;
+  transform: scale(1.3,1.3);
+}
+
+.inst:hover{
+  color:red;
+  transform:scale(1.3,1.3)
+}
+
+.lin:hover{
+  color:rgb(85, 85, 236);
+  transform: scale(1.3,1.3);
+}
+
+.gh:hover{
+    color:rgb(49, 192, 183);
+    transform: scale(1.3,1.3);
+}

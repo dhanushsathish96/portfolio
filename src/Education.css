@@ -1,0 +1,50 @@
+
+.education {
+  background-color:#eef2f7;
+  padding: 50px 20px;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.education h1 {
+  font-size: 40px;
+  margin-bottom: 30px;
+  color: black;
+}
+
+.edu{
+  background: white;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 600px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.edu:hover {
+  transform: scale(1.1);
+  background-color: rgb(7,7,85);
+  color:white;
+  transition: all 0.8s ease; 
+}
+
+.edu:hover h2{
+    color:white;
+}
+.edu:hover p{
+    color:white;
+}
+
+.edu h2 {
+  font-size: 24px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.edu p {
+  font-size: 18px;
+  color:black;
+  margin: 5px ;
+}
+
