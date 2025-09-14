@@ -40,11 +40,10 @@
     .about p{
         flex-direction: column;
         align-items: center;
+        text-align: justify;
     }
 
-    .name p{
-      text-align: justify;
-    }
+
 
     .imge{
       order:2;
