@@ -53,7 +53,7 @@ useEffect(() => {
           <p>Phone: +91 9620504580</p>
 
           <div className="socialicons">
-            <a href="https://wa.me/9620504580" target="_blank" className="what">
+            <a href="//wa.me/919620504580" target="_blank" className="what">
               <i className="bi bi-whatsapp"></i>
             </a>
             <a href="//www.instagram.com/dhanush__sathish/" target="_blank" className="inst">
