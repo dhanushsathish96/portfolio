@@ -11,7 +11,7 @@ function Home() {
       </h1>   
 
       <div className="icons">
-        <a href="https://wa.me/9620504580" target="_blank" className="whatsapp">
+        <a href="//wa.me/919620504580" target="_blank" className="whatsapp">
           <i className="bi bi-whatsapp"></i>
         </a>
 
