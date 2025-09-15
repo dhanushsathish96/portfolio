@@ -53,28 +53,25 @@ a{
 
 @media(max-width:480px){
     .lists{
-        display:none; /* hide lists by default */
+        display:none; /*wheen screen is small it hides thee lists*/
+        
     }
 
     .lists.show {
-        display: flex; /* show lists when hamburger clicked */
-        flex-direction: column;
-        gap: 10px;
-        position: absolute;
-        right: 10px; /* fix alignment */
-        top: 50px;   /* move below header */
-        background-color: rgb(7,7,85); /* optional: match header */
-        padding: 10px;
-        border-radius: 5px;
-    }
+    display: flex; /* show lists when button clicked */
+    flex-direction: column;
+    gap: 10px;
+    right:40px;
+  }
 
     .hamburger{
-        display: block;
-        position: absolute;
-        top: 12px;    /* fixed position */
-        right: 15px;  /* fixed position */
-        z-index: 1000;
-    }
+    display: block;
+    position : absolute;
+    top : 16px;
+    right: 10px;
+    
+ }
+
 }
 
 html {

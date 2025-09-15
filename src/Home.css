@@ -71,28 +71,10 @@
 
 @media(max-width:480px){
     .parent {
-        flex-direction: column;
-        padding: 20px; /* reduce padding for mobile */
-        align-items: center;
-    }
-
-    .image, .name img {
-        max-width: 100%;   /* fit within screen */
-        height: auto;      /* maintain aspect ratio */
-    }
-
-    .name h1 {
-        font-size: 28px;   /* smaller font on mobile */
-        text-align: center;
-    }
-
-    .icons {
-        gap: 15px;         /* reduce gap on mobile */
-    }
-
-    .resume-btn {
-        font-size: 16px;
-        padding: 10px 20px;
+        flex-direction: column;   
+  }
+    .image{
+        max-width:500px;
     }
 }
 
