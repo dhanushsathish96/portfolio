@@ -16,23 +16,22 @@ useEffect(() => {
   const handleLinkClick = () => setMenu(false); // close menu when link clicked
 
   return (
-    <div className="Parent">
+<div className="Parent">
   <div className="port">
     <div className="top-row">
       <a href="#home" className="logo">PORTFOLIO</a>
-      <button className="hamburger" onClick={toggleMenu}>☰</button>
+      <div className="menu-wrapper">
+        <button className="hamburger" onClick={toggleMenu}>☰</button>
+        <ul className={`lists ${menu ? "show" : ""}`}>
+          <li><a href="#home" onClick={handleLinkClick}>Home</a></li>
+          <li><a href="#about" onClick={handleLinkClick}>About</a></li>
+          <li><a href="#education" onClick={handleLinkClick}>Education</a></li>
+          <li><a href="#skill" onClick={handleLinkClick}>Skills</a></li>
+          <li><a href="#project" onClick={handleLinkClick}>Projects</a></li>
+          <li><a href="#contact" onClick={handleLinkClick}>Contact</a></li>
+        </ul>
+      </div>
     </div>
-
-    <nav>
-      <ul className={`lists ${menu ? "show" : ""}`}>
-        <li><a href="#home"  onClick={handleLinkClick}>Home</a></li>
-        <li><a href="#about" onClick={handleLinkClick}>About</a></li>
-        <li><a href="#education" onClick={handleLinkClick}>Education</a></li>
-        <li><a href="#skill" onClick={handleLinkClick}>Skills</a></li>
-        <li><a href="#project" onClick={handleLinkClick}>Projects</a></li>
-        <li><a href="#contact" onClick={handleLinkClick}>Contact</a></li>
-      </ul>
-    </nav>
   </div>
 </div>
   );

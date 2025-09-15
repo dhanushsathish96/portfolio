@@ -2,7 +2,7 @@
     display: flex;
     justify-content:space-between;
     align-items: center;
-    padding:70px;
+    padding:90px;
     /* font-size: 30px;
     font-family: 'Times New Roman', Times, serif; */
     background-color: #eef2f7;
@@ -71,12 +71,22 @@
 
 @media(max-width:480px){
     .parent {
-        flex-direction: column;   
-  }
-    .image{
-        max-width:500px;
+        flex-direction: column;
+        padding: 20px;   /* reduce padding for small screens */
+        box-sizing: border-box; /* include padding in width */
+    }
+
+    .image img {
+        max-width: 100%;  /* image fits container */
+        height: auto;     /* maintain aspect ratio */
+        display: block;   /* removes extra inline spacing */
+    }
+
+    .name{
+        padding-top:90px;
     }
 }
+
 
 .resume-btn {
   display: inline-block;

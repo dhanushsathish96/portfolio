@@ -1,86 +1,110 @@
-a{
-    text-decoration: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-ul{
-    list-style-type: none;
-    gap:20px
-}
-
-.lists{
-    display:flex;
-    padding-bottom: 18px;
-    margin: 2px;
-    gap:20px;
-    list-style: none;
-    position: relative;
-    top:-1px;
-
-}
-
-.hamburger {
-  display: none;      /* due tpo larger screen it hides the button*/
-  font-size: 20px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: white;
-  position: relative;
-  top:-10px;
-}
-
-.port{
-    display:flex;
-    justify-content: space-between;
-    font-weight: bolder;
-    padding-top:15px;
-    font-weight: bolder;
-    
-}
-
-a{
-    color:white;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 100px;
-    font-size:20px
-}
-
-.Parent{
-    background-color: rgb(7,7,85);
-    padding:5px;
-
-}
-
-@media(max-width:768px){
-    .lists{
-        display:none; /*wheen screen is small it hides thee lists*/
-        
-    }
-
-    .lists.show {
-    display: flex; /* show lists when button clicked */
-    flex-direction: column;
-    gap: 10px;
-    right:40px;
-  }
-
-    .hamburger{
-    display: block;
-    position : absolute;
-    top : 16px;
-    right: 10px;
-    
- }
-
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
 
 .Parent {
   position: fixed;
+  top: 0;
   width: 100%;
-  z-index: 999;
+  background: rgba(7,7,65);
+  z-index: 1000;
+}
+
+.port {
+  width: 100%;
+}
+
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.menu-wrapper {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.lists {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.lists a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.lists a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .top-row {
+    padding: 1rem;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+  }
+  
+  .hamburger {
+    display: block;
+  }
+  
+  .lists {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    width: 250px;
+    height: auto;
+    flex-direction: column;
+    background: rgb(7, 7, 65);
+    padding: 1rem 0;
+    gap: 0.5rem;
+    transition: right 0.3s;
+  }
+  
+  .lists.show {
+    right: 0;
+  }
+  
+  .lists a {
+    display: block;
+    width: 100%;
+    padding: 0.8rem 2rem;
+    text-align: center;
+  }
 }
