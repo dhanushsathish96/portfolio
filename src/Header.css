@@ -1,125 +1,86 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+a{
+    text-decoration: none;
 }
 
-html, body {
-  width: 100%;
-  overflow-x: hidden;
-  font-family: "Times New Roman", Times, serif;
+ul{
+    list-style-type: none;
+    gap:20px
 }
 
-/* Header container */
-.Parent {
-  width: 100%;
-  background:rgb(7,7,85);
-  color: #fff;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
+.lists{
+    display:flex;
+    padding-bottom: 18px;
+    margin: 2px;
+    gap:20px;
+    list-style: none;
+    position: relative;
+    top:-1px;
+
 }
 
-/* Flex wrapper */
-.port {
-  width: 100%;
-  height: 65px;                /* fixed header height */
-  padding: 0 20px;
-  display: flex;
-  align-items: center;         /* vertical centering */
-  justify-content: space-between; /* logo left, nav right */
-}
-
-/* Logo */
-.logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  text-decoration: none;
-  color: #fff;
-  font-family: "Times New Roman", Times, serif;
-  line-height: 1; /* avoid misalignment */
-}
-
-/* Navigation (desktop) */
-nav ul {
-  list-style: none;
-  display: flex;
-  align-items: center;   /* vertical centering for list */
-  height: 100%;          /* match parent height */
-  gap: 25px;
-  margin: 0;
-}
-
-nav ul li {
-  display: flex;
-  align-items: center;   /* ensures links are centered */
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 1.1rem;
-  font-weight: bold;     /* make bold like logo */
-  transition: color 0.3s ease;
-  font-family: "Times New Roman", Times, serif;
-  line-height: 1;        /* fix vertical offset */
-}
-
-nav ul li a:hover {
-  color: #00bcd4;
-}
-
-/* Hamburger */
 .hamburger {
-  display: none;
-  font-size: 2rem;
+  display: none;      /* due tpo larger screen it hides the button*/
+  font-size: 20px;
   background: none;
   border: none;
-  color: #fff;
   cursor: pointer;
-  margin-left: auto;
+  color: white;
+  position: relative;
+  top:-10px;
 }
 
-/* =========================
-   Mobile View
-========================= */
-@media (max-width: 768px) {
-  .port {
-    height: 55px; /* slightly smaller header on mobile */
-    padding: 0 12px;
-  }
+.port{
+    display:flex;
+    justify-content: space-between;
+    font-weight: bolder;
+    padding-top:15px;
+    font-weight: bolder;
+    
+}
 
-  nav ul {
-    position: absolute;
-    top: 55px;
-    right: 0;
-    width: 100%;
-    background: #111;
+a{
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100px;
+    font-size:20px
+}
+
+.Parent{
+    background-color: rgb(7,7,85);
+    padding:5px;
+
+}
+
+@media(max-width:768px){
+    .lists{
+        display:none; /*wheen screen is small it hides thee lists*/
+        
+    }
+
+    .lists.show {
+    display: flex; /* show lists when button clicked */
     flex-direction: column;
-    text-align: center;
-    display: none;
-    padding: 10px 0;
+    gap: 10px;
+    right:40px;
   }
 
-  nav ul.show {
-    display: flex;
-  }
-
-  nav ul li {
-    padding: 12px 0;
-    width: 100%;
-  }
-
-  nav ul li a {
+    .hamburger{
     display: block;
-    width: 100%;
-    font-size: 1.2rem;
-    font-weight: bold;
-  }
+    position : absolute;
+    top : 16px;
+    right: 10px;
+    
+ }
 
-  .hamburger {
-    display: block;
-  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.Parent {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
 }

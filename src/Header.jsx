@@ -13,25 +13,32 @@ useEffect(() => {
   window.location.hash = "#home";
 }, []);
 
+  const handleLinkClick = () => setMenu(false); // close menu when link clicked
 
   return (
     <div className="Parent">
-      <div className="port">
-        <a href="#home" className="logo">PORTFOLIO</a>
-        <button className="hamburger" onClick={toggleMenu}>☰</button>
-        <nav>
-          <ul className={`lists ${menu ? "show" : ""}`}>
-            <li><a href="#home" >Home</a></li>
-            <li><a href="#about" >About</a></li>
-            <li><a href="#education" >Education</a></li>
-            <li><a href="#skill" >Skills</a></li>
-            <li><a href="#project" >Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
+  <div className="port">
+    <div className="top-row">
+      <a href="#home" className="logo">PORTFOLIO</a>
+      <button className="hamburger" onClick={toggleMenu}>☰</button>
     </div>
+
+    <nav>
+      <ul className={`lists ${menu ? "show" : ""}`}>
+        <li><a href="#home"  onClick={handleLinkClick}>Home</a></li>
+        <li><a href="#about" onClick={handleLinkClick}>About</a></li>
+        <li><a href="#education" onClick={handleLinkClick}>Education</a></li>
+        <li><a href="#skill" onClick={handleLinkClick}>Skills</a></li>
+        <li><a href="#project" onClick={handleLinkClick}>Projects</a></li>
+        <li><a href="#contact" onClick={handleLinkClick}>Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
   );
 }
 
 export default Header;
+
+
+
