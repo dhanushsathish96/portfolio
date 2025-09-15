@@ -19,7 +19,7 @@ function Project() {
         <div className="Project2">
         <h2>E-Commerce Website</h2>
         <p>A full-stack e-commerce website using React, Node.js, and MongoDB.</p>
-        <a href="#">View Project</a>
+        <a href="#" >View Project</a>
         </div>
 
         <div className="Project3">
