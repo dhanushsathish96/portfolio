@@ -85,7 +85,7 @@
 
 
 /* Mobile View */
-@media (max-width: 768px) {
+ @media (max-width: 768px) {
   .top-row {
     padding: 1rem;
   }
@@ -121,4 +121,6 @@
     padding: 0.8rem 2rem;
     text-align: center;
   }
-}
+} 
+
+

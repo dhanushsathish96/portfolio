@@ -58,7 +58,14 @@ function Header() {
   window.location.hash = "#home";
 }, []);
 
-  const handleLinkClick = () => setMenu(false);
+  // const handleLinkClick = () => setMenu(false);
+
+  const handleLinkClick = (id) => {
+  setMenu(false);        // close menu
+  setActiveSection(id);  // set active immediately
+};
+
+
 
   // Track scroll position to set active section
   useEffect(() => {
@@ -72,7 +79,7 @@ function Header() {
           }
         });
       },
-      { threshold: 0.8 } // 60% of section visible → active
+      { threshold: 0.6 } // 60% of section visible → active
     );
 
     sections.forEach((sec) => observer.observe(sec));
@@ -89,14 +96,15 @@ function Header() {
           <a href="#home" className="logo">PORTFOLIO</a>
           <div className="menu-wrapper">
             <button className="hamburger" onClick={toggleMenu}>☰</button>
-            <ul className={`lists ${menu ? "show" : ""}`}>
-              <li><a href="#home" onClick={handleLinkClick} className={activeSection === "home" ? "active" : ""}>Home</a></li>
-              <li><a href="#about" onClick={handleLinkClick} className={activeSection === "about" ? "active" : ""}>About</a></li>
-              <li><a href="#education" onClick={handleLinkClick} className={activeSection === "education" ? "active" : ""}>Education</a></li>
-              <li><a href="#skill" onClick={handleLinkClick} className={activeSection === "skill" ? "active" : ""}>Skills</a></li>
-              <li><a href="#project" onClick={handleLinkClick} className={activeSection === "project" ? "active" : ""}>Projects</a></li>
-              <li><a href="#contact" onClick={handleLinkClick} className={activeSection === "contact" ? "active" : ""}>Contact</a></li>
-            </ul>
+<ul className={`lists ${menu ? "show" : ""}`}>
+  <li><a href="#home" onClick={() => handleLinkClick("home")} className={activeSection === "home" ? "active" : ""}>Home</a></li>
+  <li><a href="#about" onClick={() => handleLinkClick("about")} className={activeSection === "about" ? "active" : ""}>About</a></li>
+  <li><a href="#education" onClick={() => handleLinkClick("education")} className={activeSection === "education" ? "active" : ""}>Education</a></li>
+  <li><a href="#skill" onClick={() => handleLinkClick("skill")} className={activeSection === "skill" ? "active" : ""}>Skills</a></li>
+  <li><a href="#project" onClick={() => handleLinkClick("project")} className={activeSection === "project" ? "active" : ""}>Project</a></li>
+  <li><a href="#contact" onClick={() => handleLinkClick("contact")} className={activeSection === "contact" ? "active" : ""}>Contact</a></li>
+</ul>
+
           </div>
         </div>
       </div>
