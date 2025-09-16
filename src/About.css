@@ -3,13 +3,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px;
+  padding: 50px;
   flex-wrap: wrap;
 }
 
 /* Image styles */
 .imge img {
-  width: 550px;   /* larger image */
+  width: 500px;   /* larger image */
   height: auto;
   max-width: 100%;
   border-radius: 10px;
